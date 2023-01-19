@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+// Calculates the nth Fibonacci number.
+// e.x. fib(10) = 55
 int fib(int n) {
     int a = 0;
     int b = 1;
@@ -8,14 +10,16 @@ int fib(int n) {
         b = a+b;
         a = temp;
     }
-    printf("%d\n", a);
-    return b;
+    return a;
 }
 
+// Calculates the sum of all even fibonacci numbers up to an integer n.
+// e.x. fib_sum_even(10) = 0 + 2 + 8 + 34 = 44
 int fib_sum_even(int n) {
     int sum = 0;
     for (int i = 0; i < n; i++) {
         int f = fib(i);
+        printf("%d\n", f);
         if(f%2 == 0) {
             sum+=f;
         }
